@@ -1,0 +1,12 @@
+<app-divider>Modal</app-divider>
+<button (click)="onClick()">Show modal</button>
+<app-modal (close)="onClick()" *ngIf="modalOpen">
+
+    <div modalTitle>
+        I am some text sended to the modals
+    </div>
+    <p>something meaningless sent to show</p>
+    <ng-container modalFooter>
+        <button class="ui button" (click)="onClick">custom key</button>
+    </ng-container>
+</app-modal>
